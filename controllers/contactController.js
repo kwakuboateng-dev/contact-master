@@ -37,3 +37,13 @@ const updateContact = (req, res) => {
 const deleteContact = (req, res) => {
   res.status(200).json({ message: `Delete contact: ${req.params.id}`  });
 }
+
+
+// Export the functions
+module.exports = {
+  getContacts,
+  getContact,
+  createContact,
+  updateContact,
+  deleteContact
+}
