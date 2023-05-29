@@ -15,10 +15,10 @@ const {
 
 // Purpose: API endpoints for contacts
 
-// Hello World Test
-router.route('/home').get((req, res) => {
-  res.send('Hello');
-});
+// // Hello World Test
+// router.route('/home').get((req, res) => {
+//   res.send('Hello');
+// });
 
 
 // /api/v1/contacts
