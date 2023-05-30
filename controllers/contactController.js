@@ -19,7 +19,15 @@ const getContact = (req, res) => {
 //@access Public
 
 const createContact = (req, res) => {
-  res.status(200).json({ message: 'Create contact' });
+    console.log(req.body); 
+    
+    const {name, email, phone, address} = req.body;
+    if (!name || !email || !phone || !address){
+      res.status(400);
+      throw new Error("All fields are required");
+    }
+
+  res.status(201).json({ message: 'Create contact' });
 }
 
 //@route PUT /api/v1/contacts/:id

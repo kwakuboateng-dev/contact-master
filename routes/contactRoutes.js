@@ -15,34 +15,11 @@ const {
 
 // Purpose: API endpoints for contacts
 
-// // Hello World Test
-// router.route('/home').get((req, res) => {
-//   res.send('Hello');
-// });
-
-
 // /api/v1/contacts
 
-// Get all contacts
-router.route('/').get(getContacts);
+router.route('/').get(getContacts).post(createContact);
 
-// Get a single contact
-router.route('/:id').get(getContact);
-
-// Create a contact
-router.route('/').post(createContact);
-
-// Update a contact
-router.route('/:id').put(updateContact);
-
-// Delete a contact
-router.route('/:id').delete(deleteContact);
-
-
-// router.route('/').get((req, res) => {
-//   res.status(200).json({ message: 'Test Master API' });
-// });
-
+router.route('/:id').get(getContact).put(updateContact).delete(deleteContact);
 
 
 module.exports = router;
